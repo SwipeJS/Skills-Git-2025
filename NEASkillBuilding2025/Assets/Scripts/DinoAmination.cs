@@ -29,7 +29,7 @@ public class DinoAmination : MonoBehaviour {
 		{
 			MyAnimator.Play ("jump");
 		} 
-		else if (MyAnimator.GetBool("dead"==false)); 
+		else if (MyAnimator.GetBool("dead")==false)
 		{
 		MyAnimator.SetBool ("idle", true);
 		MyAnimator.SetBool("walk",false);
@@ -37,7 +37,7 @@ public class DinoAmination : MonoBehaviour {
 		} 
 		else if (Input.GetKey(KeyCode.Q) && MyAnimator.GetBool("dead")==true)
 		{
-			MyAnimator.Play("Respawn");
+			MyAnimator.Play("respawn");
 			MyAnimator.SetBool ("dead", false);
 		}
 	}
