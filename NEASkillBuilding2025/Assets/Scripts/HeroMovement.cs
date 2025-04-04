@@ -10,7 +10,11 @@ public class HeroMovement : MonoBehaviour {
 		speed = 5.1f;
 		rb=GetComponent<Rigidbody2D>();
 	}
-	
+
+	void resetPosition(){
+		Debug.Log("SPIKED RECEIVED!");
+		transform.SetPositionAndRotation( new Vector3 (0.38f,-1.28f,0),Quaternion.identity);
+				}
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (Input.GetKey(KeyCode.RightArrow)|| Input.GetKey(KeyCode.LeftArrow))
