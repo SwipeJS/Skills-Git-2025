@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro
+using TMPro;
 
 public class TextController : MonoBehaviour {
 
@@ -16,6 +16,6 @@ public class TextController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		totalGems = GameObject.FindGameObjectsWithTag ("redGem");
-		gemCounter.text = "Gems: ",totalGems.Length.ToString():
+		gemCounter.text = "Gems: "+totalGems.Length.ToString();
 	}
 }
