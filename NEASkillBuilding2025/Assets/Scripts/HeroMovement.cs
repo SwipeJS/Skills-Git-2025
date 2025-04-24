@@ -5,6 +5,15 @@ using UnityEngine;
 public class HeroMovement : MonoBehaviour {
 	Rigidbody2D rb;
 	float speed;
+	int lives=2;
+	public void setLives(){
+		lives -= 1;
+		if (lives <= 0) 
+		{
+			Debug.Log ("End of game");
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		speed = 5.1f;
@@ -14,6 +23,7 @@ public class HeroMovement : MonoBehaviour {
 	void resetPosition(){
 		Debug.Log("SPIKED RECEIVED!");
 		transform.SetPositionAndRotation( new Vector3 (0.38f,-1.28f,0),Quaternion.identity);
+		setLives ();
 				}
 	// Update is called once per frame
 	void FixedUpdate () {
